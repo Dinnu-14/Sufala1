@@ -97,62 +97,92 @@ p{
     color: #333;
 }
 
-/*--fetured products---*/
+/*/* Container */
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+/* Section title */
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
 }
-.catagories h4{
-    color: #555;
-    
-}
-.col-4{
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transform: 0.5s;
-}
-.col-4 img{
-    width: 100%;
-    
-}
-.title{
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
-.title::after{
-    content: '';
-    background-color: #ffd24e;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 
+.title::after {
+  content: '';
+  background-color: #ffd24e;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-h4{
-    color: #555;
-    font-size: normal;
-}
-.col-4{
-    font-size: 14px;
-}
-.rating .fa{
-    color: #ff523b;
-}
-.col-4:hover{
-    transform: translateY(-5px);
 
+/* Shopping Grid Layout */
+.row ,.catagories_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
+
+.catagories_row .col-4 {
+  flex: 1 1 calc(25% - 20px); /* 4 per row on desktop */
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+  font-size: 14px;
+}
+
+.catagories_row .col-4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.catagories_row .col-4 h4 {
+  color: #555;
+  margin: 10px 0 5px;
+}
+
+.catagories_row .rating {
+  margin: 5px 0;
+}
+
+.catagories_row .rating .fa {
+  color: #ff523b;
+}
+
+.catagories_row .col-4:hover {
+  transform: translateY(-5px);
+}
+
+/* Category heading style (optional) */
+.catagories h4 {
+  color: #555;
+}
+
+/* Tablet: Keep 4 per row - no change needed */
+
+/* Mobile: 2 per row */
+@media(max-width: 480px) {
+  .catagories_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
 
 /*----offer----*/
 
@@ -291,7 +321,7 @@ ul{
     margin: 100px auto 50px;
 }
 select{
-    border: 1px solid #ff523b;
+    border: 1px dashed #ff523b;
     padding:5px ;
 }
 select:focus{
