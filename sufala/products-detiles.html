@@ -33,17 +33,59 @@
         </nav>
         <a href="cart.html"><img src="cart.jpg" width="30px" height="30px"></a>
         <img src="menu.png" class="menu_icon" 
-        onclick="menutoggle()">
-          
+        onclick="menutoggle()">    
     </div>
-    
     </div>
+  
+<!--single product details-->
+
+        <div class="small-container single-product">
+                <div class="row"> 
+                    <div class="col-2">
+                        <img src="products/product 2.png" width="100%" id="productImg" >
+                        
+                        <div class="small-img-row">
+                            <div class="small-img-col">
+                                <img src="products/product 2.png" width="100%" 
+                                class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="products/product 2.png" width="100%" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="products/product 2.png" width="100%" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="products/product 2.png" width="100%" class="small-img">
+                            </div>
+                        </div>
 
 
 
 
+                    </div>
+                <div class="col-2">
+                        <p>Home / groundnut</p>
+                        <h1>Extravirgen groundnut oil</h1>
+                        <h4>₹450</h4>
+                        <br>
+                        <input type="number" value="1">
+                        <a href="cart.html" class="btn">Add To Cart</a>
+                        <h3><br>Product Details <i class="fa fa-indent"></i></h3>
+                        <br>
+                        <p> Experience the purity and goodness of Sufala Naturals Extra Virgin Cold Pressed Safflower Oil! 🌱✨</p>
+                    </div>
+                </div>
+        </div>
+<!--title-->
     <div class="small-container">
-        <h2 class="title">Featured Products</h2>
+        <div class="row row-2">
+            <h2>Releted Product</h2>
+            <p>View More</p>
+        </div>
+    </div>
+<!--products-->
+    <div class="small-container ">
         <div class="catagories_row">
             <div class="col-4">
                 <a href="products-detiles.html"><img src="products/product 2.png"></a>
@@ -145,15 +187,7 @@
             
         </div>
     </div>
-
-
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>&#8594</span>
-        </div>
+           
     </div>
 
 
@@ -213,6 +247,36 @@
                 }
         } 
     </script>
+
+<!--js for product gallery-->
+
+    <script>
+        var productImg =document.getElementById("productImg")
+        var SmallIng = document.getElementsByClassName("small-img")
+
+            SmallIng[0].onclick=function()
+                {
+                productImg.src = SmallIng[0].src;  
+                }
+             SmallIng[1].onclick=function()
+                {
+                productImg.src = SmallIng[1].src;  
+                }
+             SmallIng[2].onclick=function()
+                {
+                productImg.src = SmallIng[2].src;  
+                }
+             SmallIng[3].onclick=function()
+                {
+                productImg.src = SmallIng[3].src;  
+                }
+
+
+
+
+    </script>
+
+
 
 </body>
 </html>
